@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+{% if session['logged_in'] %}
+   
+	<h3>{{session['username']}}, choose your pet:</h3>
+
+  <div class="p-2 text-light">
+  <form action="./create" method="POST">
+    Pet name: <input type="text" name="pet_name"><br>
+    {% for pet in pets %}
+    <input type="radio" name="pet_type" value="{{ pet.pet_type }}">
+    <b>{{ pet.pet_type }}</b> costs: <b>{{ pet.price }} gold</b>
+    <br>
+    {% endfor %}
+    <input type="submit" value="Choose">
+  </form>
+  </div>
+  
+
+  <br>
+	<a class="p-2 text-light" href="/pets">Cancel</a>
+
+{% endif %}
+{% endblock %}

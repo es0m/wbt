@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+{% if session['logged_in'] %}
+   
+	<h3>Hello, {{session['username']}}.</h3>
+	{% if pets %}
+	<p>You have:</p>
+    {% for pet, filename in pets %}
+    <div class="p-2 text-light">
+		<b>{{ pet.name }}</b> the {{ pet.pet_type }} strength: <b>{{ pet.price * 10}}</b>
+		
+		<img src="/static/pets/{{ filename }}" height="100px">		
+	</div>
+    {% endfor %}
+	{% else %}
+		<p>You have 0 pets.</p>
+	{% endif %}
+	<br>
+	<a class="p-2 text-dark" href="/pets/create">Create a pet</a>
+
+{% endif %}
+{% endblock %}
