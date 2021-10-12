@@ -18,7 +18,7 @@ matplotlib==2.0.2
 mccabe==0.6.1
 mortgage==1.0.2
 numpy==1.13.1
-opencv-python==3.4.0.12
+opencv-python==3.4.7.28
 pandas==0.23.1
 py-moneyed==0.7.0
 py-mortgagekit==1.0.3b1
