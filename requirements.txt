@@ -17,7 +17,7 @@ lxml==4.6.2
 matplotlib==2.0.2
 mccabe==0.6.1
 mortgage==1.0.2
-numpy==1.13.1
+numpy==1.22.0
 opencv-python==3.4.0.12
 pandas==0.23.1
 py-moneyed==0.7.0
